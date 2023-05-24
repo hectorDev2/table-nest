@@ -18,15 +18,6 @@ export class UserController {
     return this.userService.findAll();
   }
 
-  // @Get(':term')
-  // findOne(@Param('term') term: string) {
-  //   return this.userService.findOne( term );
-  // }
-
-  @Patch(':term')
-  update(@Param('term') term: string, @Body() updatePokemonDto: any) {
-    return this.userService.update( term, updatePokemonDto);
-  }
 
   @Delete(':id')
   remove(@Param('id', ParseMongoIdPipe ) id: string) {

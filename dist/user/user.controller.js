@@ -27,9 +27,6 @@ let UserController = class UserController {
     findAll() {
         return this.userService.findAll();
     }
-    update(term, updatePokemonDto) {
-        return this.userService.update(term, updatePokemonDto);
-    }
     remove(id) {
         return this.userService.remove(id);
     }
@@ -47,14 +44,6 @@ __decorate([
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "findAll", null);
-__decorate([
-    (0, common_1.Patch)(':term'),
-    __param(0, (0, common_1.Param)('term')),
-    __param(1, (0, common_1.Body)()),
-    __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, Object]),
-    __metadata("design:returntype", void 0)
-], UserController.prototype, "update", null);
 __decorate([
     (0, common_1.Delete)(':id'),
     __param(0, (0, common_1.Param)('id', parse_mongo_id_pipe_1.ParseMongoIdPipe)),

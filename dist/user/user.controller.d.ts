@@ -9,6 +9,5 @@ export declare class UserController {
     findAll(): Promise<(import("./entities/user.entity").User & {
         _id: import("mongoose").Types.ObjectId;
     })[]>;
-    update(term: string, updatePokemonDto: any): Promise<void>;
-    remove(id: string): Promise<void>;
+    remove(id: string): Promise<string>;
 }

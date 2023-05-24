@@ -43,25 +43,21 @@ export class UserService {
   }
 
   async remove( id: string) {
-    // const pokemon = await this.findOne( id );
-    // await pokemon.deleteOne();
-    // return { id };
-    // const result = await this.pokemonModel.findByIdAndDelete( id );
     const { deletedCount } = await this.userModel.deleteOne({ _id: id });
     if ( deletedCount === 0 )
-      throw new BadRequestException(`Pokemon with id "${ id }" not found`);
+      throw new BadRequestException(`user with id "${ id }" not found`);
 
-    return;
+    return 'user deleted'
+    ;
   }
 
 
   private handleExceptions( error: any ) {
-
     if ( error.code === 11000 ) {
-      throw new BadRequestException(`Pokemon exists in db ${ JSON.stringify( error.keyValue ) }`);
+      throw new BadRequestException(`User exists in db ${ JSON.stringify( error.keyValue ) }`);
     }
     console.log(error);
-    throw new InternalServerErrorException(`Can't create Pokemon - Check server logs`);
+    throw new InternalServerErrorException(`Can't create User - Check server logs`);
   }
 
 }

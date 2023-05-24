@@ -12,12 +12,8 @@ import { UserModule } from './user/user.module';
     ServeStaticModule.forRoot({
       rootPath: join(__dirname,'..','public'), 
     }),
-
     MongooseModule.forRoot('mongodb://localhost:27017/nest-pokemon'),
-
-
     CommonModule,
-
     UserModule,
 
   ],

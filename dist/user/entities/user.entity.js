@@ -16,18 +16,23 @@ let User = class User extends mongoose_2.Document {
 };
 __decorate([
     (0, mongoose_1.Prop)({
-        unique: true,
-        index: true,
+        isRequired: true
     }),
     __metadata("design:type", String)
 ], User.prototype, "name", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({
+        isRequired: true
+    }),
+    __metadata("design:type", String)
+], User.prototype, "lastName", void 0);
 __decorate([
     (0, mongoose_1.Prop)({
         unique: true,
         index: true,
     }),
     __metadata("design:type", String)
-], User.prototype, "lastName", void 0);
+], User.prototype, "dni", void 0);
 User = __decorate([
     (0, mongoose_1.Schema)()
 ], User);

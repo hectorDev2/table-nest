@@ -6,17 +6,23 @@ export class User extends Document {
 
     // id: string // Mongo me lo da
     @Prop({
-        unique: true,
-        index: true,
+        isRequired:true
     })
     name: string;
+
+    @Prop(
+        {
+        isRequired:true
+    }
+    )
+    lastName: string;
+
 
     @Prop({
         unique: true,
         index: true,
     })
-    lastName: string;
-
+    dni: string;
 }
 
 

@@ -11,6 +11,6 @@ export declare class UserService {
         _id: import("mongoose").Types.ObjectId;
     })[]>;
     update(term: string, updatePokemonDto: any): Promise<void>;
-    remove(id: string): Promise<void>;
+    remove(id: string): Promise<string>;
     private handleExceptions;
 }
